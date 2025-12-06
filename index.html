@@ -109,9 +109,17 @@
             text-align: center; margin-top: 28px; padding-top: 20px;
             border-top: 1px solid rgba(161, 141, 83, 0.15);
         }
+        .footer-content {
+            display: flex; align-items: center; justify-content: center;
+            gap: 20px; flex-wrap: wrap;
+        }
         .footer-text {
             font-size: 10px; color: var(--grey); letter-spacing: 2px; text-transform: uppercase;
         }
+        .ordre-logo {
+            height: 30px; width: auto; opacity: 0.7; transition: opacity 0.3s ease;
+        }
+        .ordre-logo:hover { opacity: 1; }
         @media (max-width: 480px) {
             body { background-attachment: scroll; }
             .card { padding: 32px 24px; }
@@ -119,6 +127,7 @@
             .name { font-size: 28px; }
             .button-grid { grid-template-columns: 1fr; }
             .btn-primary { grid-column: 1; }
+            .footer-content { flex-direction: column; gap: 12px; }
         }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .card { animation: fadeInUp 0.6s ease-out; }
@@ -206,7 +215,10 @@
                 <div class="response-notice-text">Je m'engage à vous répondre dans les 72 heures suivant votre demande de rendez-vous.</div>
             </div>
             <div class="footer">
-                <p class="footer-text">SKYLYON PARTNERS</p>
+                <div class="footer-content">
+                    <p class="footer-text">SKYLYON PARTNERS</p>
+                    <img src="Ordre_des_EC_logo.png" alt="Ordre des Experts-Comptables" class="ordre-logo">
+                </div>
             </div>
         </div>
     </div>
